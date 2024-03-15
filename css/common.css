@@ -1,0 +1,63 @@
+/* reset css 설정 */
+@import url('https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css');
+
+/* web fonts 설정 */
+/* 한글 noto sans*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* 영어 Exo 2 */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+/* font awesome 아이콘 사용 설정 */
+/* major 버전을 일치해서 사용 할 것 */
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css');
+
+
+/* 추가 리셋 */
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+button , input {
+  outline: none;
+  border:  none;
+  color: inherit;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+/* common */
+
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+body{
+  font-size: 14px;
+  font-family: 'Noto Sans KR' , sans-serif;
+}
+
+.en{
+  font-family: 'Exo 2' , sans-serif0;
+}
+
+
+/* 모바일에서는 줄바꿈 해제 */
+
+br.mo{
+  display: none;
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); 
+}

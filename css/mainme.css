@@ -1,0 +1,446 @@
+@import url(./common.css);
+
+/* header style */
+
+header{
+  background: rgba(0, 0, 0, 0.2);
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+header .inner-header{
+  width: 84%;
+  margin: 0 auto;
+}
+
+header .inner-header .logo{
+  float: left;
+  /*이미지 사이즈 수정은 박스/액자의 사이즈를 먼저 조정*/
+  width: 200px;
+}
+
+header .inner-header .logo img{
+  width: 100%;
+}
+
+header .inner-header .gnb{
+  /* border: 3px solid red; */
+  float: left;
+  margin-left: 80px;
+}
+
+header .inner-header .gnb li{
+  /* border: 3px dashed yellow; */
+  float: left;
+  margin-right: 80px;
+}
+
+header .inner-header .gnb li a{
+  /* background: red; */
+  display: block;
+  color: #fff;
+  font-size: 16px;
+}
+
+header .inner-header .gnb li a:hover{
+  color: #ff8342;
+}
+
+header .inner-header .tnb{
+  /* border: 3px solid blue; */
+  float: right;
+  color: #fff;
+  font-size: 16px;
+} 
+
+header .inner-header .tnb li{
+  float: left;
+  margin-right: 25px;
+}
+
+header .inner-header .tnb li:first-child i,
+header .inner-header .tnb li:nth-child(2) i{
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+header .inner-header .tnb li:last-child a{
+  border: 1px solid #fff;
+  padding: 5px 15px;
+  border-radius: 30px;
+}
+header .inner-header .tnb li:last-child a:hover{
+  background: #fff;
+  color: #ff8342;
+}
+
+header .inner-header .tnb li:last-child i{
+  margin-left: 5px;
+}
+
+header .inner-header .gnb-mobile {
+  display: none;
+}
+
+
+/* section.main style */
+
+section.main {
+  background: url(../img/vis_4.jpg) no-repeat center/cover fixed;
+  height: 100vh;
+  position: relative;
+}
+
+section.main .main-title{
+  /* background: red; */
+  color: #fff;
+  text-align: center;
+  /* 아래 4줄 하나의 공식- 박스 정중앙으로 이동 */
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);  */
+  text-shadow: 2px 2px 10px #123;
+}
+
+section.main .main-title h2{
+  font-size: 55px;
+}
+section.main .main-title p{
+  font-size: 25px;
+  margin: 20px 0;
+}
+section.main .main-title .view{
+  font-size: 15px;
+  letter-spacing: 2px;
+  width: 180px;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  padding: 8px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+section.main .main-title .view::after{
+  content:'';
+  width: 0;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+}
+
+section.main .main-title .view:hover::after{
+  width: 100%;
+}
+
+/* section > div.title 공통 style */
+
+section .title{
+  text-align: center;
+}
+
+section .title h2{
+  font-size: 45px;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+section .title p{
+  font-size: 18px;
+  color: #555;
+}
+
+section .sub-container{
+  width: 74%;
+  margin: 0 auto;
+  /* background: tomato; */
+}
+
+/* section.about style */
+
+section.about{
+  margin: 80px 0;
+}
+
+section.about ul.sub-container {
+  margin-top: 30px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 30px;
+}
+
+section.about ul.sub-container li {
+  float: left;
+  width: 33.333%;  
+  height: 510px;
+
+  
+}
+
+section.about ul.sub-container li a:hover .img-box img{
+  transform: scale(1.2);
+}
+
+
+section.about ul.sub-container li .img-box{
+  overflow: hidden;
+}
+
+section.about ul.sub-container li .img-box img{
+  width: 100%;
+  transition: 0.6s;
+}
+
+section.about ul.sub-container li .text{
+
+  padding: 25px;
+}
+
+section.about ul.sub-container li .text h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+section.about ul.sub-container li .text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+section.about ul.sub-container li .text .more{
+  /*lowercase 일괄 소문자 변경 , uupercase 일괄 대문자 변경*/
+  text-transform: uppercase;
+  text-wrap: 700;
+  position: relative;
+  padding-left: 40px;
+}
+
+section.about ul.sub-container li .text .more::before{
+  content: '→';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #ff8342;
+  border-radius: 50%; /* 정사각형을 원으로 변경함 */
+  position: absolute;
+  left: 0;
+  top: -7px;
+  text-align: left;
+  line-height: 30px;
+}
+
+section.innovation .title p{
+  padding-bottom: 30px;
+}
+
+section.innovation .sub-container.img-box{
+  background: url(../img/product_1.jpg) no-repeat center/cover fixed;
+  height: 510px;
+  position: relative;
+}
+
+section.innovation .sub-container .inner{
+  width: 70%;
+  text-align: center;
+  position: absolute;
+  left : 50%;
+  transform: translate(-50%,270%); 
+}
+
+section.innovation .sub-container .inner h3{
+  padding: 20px 30px;
+  background: #fff;
+  text-align: left;
+  font-weight: 700;
+}
+section.innovation .sub-container .inner .bottom{
+  padding: 30px;
+  background: #123456;
+  color: #fff;
+  font-size: 15px;
+  text-align: left;
+}
+
+section.innovation .sub-container .inner .bottom p{
+  width: 70%;
+  float: left;
+}
+
+section.innovation .sub-container .inner .bottom a{
+  width: 15%;  
+  background: #ff8342;
+  text-align: center;
+  float: right;
+  padding: 5px;
+  border-radius: 30px;
+}
+
+section.me{
+  background: url(../img/me.jpg);
+  margin-top: 100px;
+  height: 800px;
+}
+
+section.me .title{
+  padding-top: 100px;
+}
+
+section.me .title p{
+  padding-bottom: 30px;
+}
+
+section.me .sub-container.list{
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+section.me .sub-container:first-child{
+  border-bottom: 1px solid #000;
+}
+
+
+
+section.me .sub-container li h3{
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 15px;
+}
+
+section.me .sub-container li h3 i{
+  padding-right: 10px;
+  color :#ff8342;
+}
+
+section.me .sub-container li p{
+  padding: 20px;
+  line-height: 1.5;
+}
+
+section.me .sub-container .in{
+  padding-left: 25px ;
+  /* border: 1px solid #000; */
+  /* padding-bottom: 15px; */
+} 
+
+
+section.me .sub-container .in li em{
+  float: left;
+  height: 63px;
+  line-height: 63px;
+  font-weight: 700;
+  /* border: 1px solid orange; */
+}
+section.me .sub-container .in li p{
+  float: left;
+  /* border: 1px solid blue; */
+}
+
+
+section.me .sub-container li a{
+  padding-left: 20px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+section.me .sub-container li a .fa{
+  color: #ff8342;
+  padding-bottom: 15px;
+}
+
+section.me #incruit-btn{
+  width: 15%;
+  margin: 15px auto;
+  display: block;
+  border-top: 30px;
+  background: #ff8342;
+  padding: 10px;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 700;
+}
+
+
+section.sns .title{
+  margin: 30px auto;
+}
+
+section.sns .sub-container li{
+  float: left;
+  width: 31.7%;
+  margin-right: 20px;
+}
+
+section.sns .sub-container li .img-box{
+  height: 380px;
+  overflow: hidden;
+}
+
+section.sns .sub-container li .bottom{
+  padding-top: 15px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+section.sns .sub-container li .bottom .color{
+  color: #ff8342;
+}
+
+section.sns .sub-container li .bottom .time{
+  padding-top: 30px;
+  font-size: 15px;
+  color: lightgray;
+}
+
+footer .inner{
+  width: 84%;
+  margin: 30px auto;
+  padding-top: 20px;
+  border-top: 1px solid #555;
+} 
+footer .inner .ft-logo{
+  float: left;
+
+}
+
+footer .inner .address{
+  float: left;
+  height: 161px;
+  line-height: 161px;
+  margin-left: 15px;
+  position: relative;
+  font-weight: 700;
+}
+
+footer .inner .address .en{
+  display:inline-block;
+  position: absolute;
+  line-height: 15;
+  top:0;
+  font-weight: 400;
+  color: #555;
+}
+
+footer .inner .list{
+  float: right;
+  height: 161px;
+  line-height: 161px;
+}
+
+footer .inner .list li{
+  padding-right: 50px;
+  display: inline-block;
+  font-size: 15px;
+  margin-right: 15px;
+}
+
+footer .inner .list li:last-child{
+  font-weight: 700;
+}
